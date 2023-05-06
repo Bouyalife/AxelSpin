@@ -1,3 +1,9 @@
+FROM maven:3.8.3-jdk-17 as build
+
+COPY . .
+
+RUN mvn clean package
+
 FROM openjdk:17-jdk
 
 WORKDIR /app

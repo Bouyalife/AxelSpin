@@ -6,8 +6,7 @@ RUN mvn clean package
 
 FROM openjdk:17-jdk
 
-WORKDIR /app
 
-COPY target/AxelSpin-0.0.1-SNAPSHOT.jar /app/AxelSpin.jar
+COPY target/AxelSpin-0.0.1-SNAPSHOT.jar AxelSpin.jar
 
-ENTRYPOINT ["java", "-jar", "/app/AxelSpin.jar"]
+ENTRYPOINT ["java", "-jar", "AxelSpin.jar"]
